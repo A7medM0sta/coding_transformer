@@ -1,0 +1,37 @@
+{
+    "os": "macOS-14.4.1-arm64-arm-64bit",
+    "python": "3.9.18",
+    "heartbeatAt": "2024-06-03T13:03:22.457646",
+    "startedAt": "2024-06-03T13:03:21.614200",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/ahmedmostafa/from_eng_to_arabic_transformer_from_scratch/train_web.py",
+    "codePathLocal": "train_web.py",
+    "codePath": "train_web.py",
+    "git": {
+        "remote": "https://github.com/A7medM0sta/from_eng_to_arabic_transformer_from_scratch.git",
+        "commit": "7852831da9611ee0b1f171c52cabedea3179adcc"
+    },
+    "email": "am7413780@gmail.com",
+    "root": "/Users/ahmedmostafa/from_eng_to_arabic_transformer_from_scratch",
+    "host": "Ahmeds-MacBook-Air-2.local",
+    "username": "ahmedmostafa",
+    "executable": "/Users/ahmedmostafa/miniconda3/envs/torch/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "/": {
+            "total": 228.27386474609375,
+            "used": 220.09779739379883
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 8.0
+    }
+}
