@@ -104,7 +104,7 @@ def run_validation(model, validation_ds, tokenizer_src, tokenizer_tgt, max_len, 
     if writer:
         # Evaluate the character error rate
         # Compute the char error rate 
-        metric = torchmetrics.CharErrorRate()
+        metric = torchmetrics.text.CharErrorRate()
         cer = metric(predicted, expected)
         writer.add_scalar('validation cer', cer, global_step)
         writer.flush()
