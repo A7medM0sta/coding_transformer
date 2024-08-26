@@ -9,3 +9,5 @@ tensorboard
 altair
 wandb
 tqdm
+torchinfo
+

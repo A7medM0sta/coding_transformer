@@ -97,6 +97,43 @@ Once the decoder generates output embeddings, a **linear layer** predicts the ne
 * The error function, **CrossEntropyLoss**, compares the model’s predictions with the actual tokens and adjusts the model to minimize the error, allowing it to learn from its mistakes.
 ---
 
+## Summary for architecture from torch summary
+```
+===============================================================================================
+Layer (type:depth-idx)                        Output Shape              Param #
+===============================================================================================
+Transformer                                   [24, 350, 119547]         --
+├─Embedding: 1-1                              [24, 350, 768]            (91,812,096)
+├─Embedding: 1-2                              [24, 350, 768]            (recursive)
+├─LearnedPositionalEncoding: 1-3              [24, 350, 768]            --
+│    └─Embedding: 2-1                         [350, 768]                (393,216)
+├─LearnedPositionalEncoding: 1-4              [24, 350, 768]            (recursive)
+│    └─Embedding: 2-2                         [350, 768]                (recursive)
+├─EncoderLayer: 1-5                           [24, 350, 768]            --
+│    └─ModuleList: 2-3                        --                        --
+│    │    └─EncoderBlock: 3-1                 [24, 350, 768]            2,779,409
+│    │    └─EncoderBlock: 3-2                 [24, 350, 768]            2,779,409
+│    │    └─EncoderBlock: 3-3                 [24, 350, 768]            2,779,409
+│    │    └─EncoderBlock: 3-4                 [24, 350, 768]            2,779,409
+├─DecoderLayer: 1-6                           [24, 350, 768]            --
+│    └─ModuleList: 2-4                        --                        --
+│    │    └─DecoderBlock: 3-5                 [24, 350, 768]            4,353,041
+│    │    └─DecoderBlock: 3-6                 [24, 350, 768]            4,353,041
+│    │    └─DecoderBlock: 3-7                 [24, 350, 768]            4,353,041
+│    │    └─DecoderBlock: 3-8                 [24, 350, 768]            4,353,041
+├─Linear: 1-7                                 [24, 350, 119547]         91,931,643
+===============================================================================================
+Total params: 212,666,755
+Trainable params: 120,461,443
+Non-trainable params: 92,205,312
+Total mult-adds (G): 7.57
+===============================================================================================
+Input size (MB): 0.13
+Forward/backward pass size (MB): 10833.38
+Params size (MB): 850.67
+Estimated Total Size (MB): 11684.18
+===============================================================================================
+```
 
 
 
