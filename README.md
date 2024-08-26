@@ -62,5 +62,5 @@ Similar to the encoder block, but with two key differences:
 ### 7. **Output Processing**
 Once the decoder generates output embeddings, a **linear layer** predicts the next token by assigning a score (logit) to each word in the vocabulary. A **softmax** function converts these logits into probabilities.
 
-The error function, **CrossEntropyLoss**, compares the model’s predictions with the actual tokens and adjusts the model to minimize the error, allowing it to learn from its mistakes.
+* The error function, **CrossEntropyLoss**, compares the model’s predictions with the actual tokens and adjusts the model to minimize the error, allowing it to learn from its mistakes.
 ---
