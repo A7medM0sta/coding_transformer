@@ -64,3 +64,20 @@ Once the decoder generates output embeddings, a **linear layer** predicts the ne
 
 * The error function, **CrossEntropyLoss**, compares the model’s predictions with the actual tokens and adjusts the model to minimize the error, allowing it to learn from its mistakes.
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### references:
+* https://deeprevision.github.io/posts/001-transformer/
