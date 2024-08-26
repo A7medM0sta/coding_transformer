@@ -1,5 +1,37 @@
 
 ---
+### Datasets used in this project
+* European Parliament Proceedings Parallel Corpus 1996-2011
+
+| **Description**                                      | **File Size** | **Date Range**        |
+|------------------------------------------------------|---------------|-----------------------|
+| **Source Release** (text files)                      | 1.5 GB        | -                     |
+| **Tools** (preprocessing tools and sentence aligner) | 8.6 KB        | -                     |
+| **Parallel Corpus** Bulgarian-English                | 41 MB         | 01/2007 - 11/2011     |
+| **Parallel Corpus** Czech-English                    | 60 MB         | 01/2007 - 11/2011     |
+| **Parallel Corpus** Danish-English                   | 179 MB        | 04/1996 - 11/2011     |
+| **Parallel Corpus** German-English                   | 189 MB        | 04/1996 - 11/2011     |
+| **Parallel Corpus** Greek-English                    | 145 MB        | 04/1996 - 11/2011     |
+| **Parallel Corpus** Spanish-English                  | 187 MB        | 04/1996 - 11/2011     |
+| **Parallel Corpus** Estonian-English                 | 57 MB         | 01/2007 - 11/2011     |
+| **Parallel Corpus** Finnish-English                  | 179 MB        | 01/1997 - 11/2011     |
+| **Parallel Corpus** French-English                   | 194 MB        | 04/1996 - 11/2011     |
+| **Parallel Corpus** Hungarian-English                | 59 MB         | 01/2007 - 11/2011     |
+| **Parallel Corpus** Italian-English                  | 188 MB        | 04/1996 - 11/2011     |
+| **Parallel Corpus** Lithuanian-English               | 57 MB         | 01/2007 - 11/2011     |
+| **Parallel Corpus** Latvian-English                  | 57 MB         | 01/2007 - 11/2011     |
+| **Parallel Corpus** Dutch-English                    | 190 MB        | 04/1996 - 11/2011     |
+| **Parallel Corpus** Polish-English                   | 59 MB         | 01/2007 - 11/2011     |
+| **Parallel Corpus** Portuguese-English               | 189 MB        | 04/1996 - 11/2011     |
+| **Parallel Corpus** Romanian-English                 | 37 MB         | 01/2007 - 11/2011     |
+| **Parallel Corpus** Slovak-English                   | 59 MB         | 01/2007 - 11/2011     |
+| **Parallel Corpus** Slovene-English                  | 54 MB         | 01/2007 - 11/2011     |
+| **Parallel Corpus** Swedish-English                  | 171 MB        | 01/1997 - 11/2011     |
+* I used many parts from it but mainly the English-French part.
+* source: https://www.statmt.org/europarl/
+---
+
+
 
 # Transformer Architecture
 
@@ -79,5 +111,5 @@ Once the decoder generates output embeddings, a **linear layer** predicts the ne
 
 
 
-#### references:
+#### References:
 * https://deeprevision.github.io/posts/001-transformer/
