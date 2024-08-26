@@ -106,3 +106,25 @@ In the case of padding mask, if we have a batch of two sequences: ["The cat sat 
 Note: Multi-Head & Masked Multi-Head Attention also have a projection layer (The Linear in the above 👆👆 image). Its job is to project these embeddings, updated from word context, to a more concise form for the Model.
 
 💡Note: In our implementation below instead of creating multiple heads each with their Networks to get queries (Q), keys (K) and values (V), we are going to cleverly use a big network each for getting Q, K, and V and we will share the output of this networks to all the heads (This bascially does the same thing as with creating multiple heads, this is just a more compute effective way).
+
+#### Encoeder Block
+We crossed out the **Add&Norm** because we are replacing it with **ReZero** in this model (as we will see shortly).
+
+The first layer shown is a **Multi-Head Attention** layer within the encoder block. This is called a **Self-Attention** layer because the multi-head attention mechanism draws its queries, keys and values only from the encoder input embeddings themselves.
+
+In other words, the input embeddings are enriched solely based on relationships within themselves, without any external context.
+
+We also notice the **skip connection** arrow that bypasses this Self-Attention layer, connecting the input directly to the output. This allows signals to propagate easily through the model. With ReZero, we omit the Layer normalization in the Add&Norm, instead doing a weighted addition as follows:
+
+$$\text{skip} + \text{re_zero_weight} \times \text{output}$$
+
+There is also a **dropout** layer (not shown in the image) that randomly sets some outputs to zero with a certain probability. This forces the model to utilize as much information as it can get. So the ReZero connection actually looks like:
+
+$$\text{skip} + \text{re_zero_weight} \times \text{dropout}(\text{output})$$
+
+Next is the **feed forward network**, whose purpose is to process all the information extracted by the previous layers into a more organized and understandable representation for later stages of the model. It also employs a residual skip connection.
+
+
+
+
+
